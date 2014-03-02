@@ -3,6 +3,8 @@ Nisr::Application.routes.draw do
   get "dashboard/index"
   resources :organizations
 
+  resources :surveys
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

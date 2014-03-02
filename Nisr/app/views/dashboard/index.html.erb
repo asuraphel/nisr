@@ -1,3 +1,12 @@
 <% content_for :sidebar do %> 
     <%= render "sidebar" %>
 <% end %> 
+
+
+<div> 
+    <ul> 
+    <% current_user.organization.surveys.each do |survey| %>
+        <li> <%= survey.name %> </li>  
+    <% end %> 
+    </ul> 
+</div> 
