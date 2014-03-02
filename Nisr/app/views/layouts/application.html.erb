@@ -5,6 +5,8 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
+<link rel="shortcut icon" href="/assets/eye.png">
 </head>
 <body>
 
@@ -31,6 +33,10 @@
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? then %> 
+            <li><a href="#"><%= current_user.first_name %> </a>	</li>
+	    <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+        <% end %> 
         <li><a class="btn btn-default" href="#">Create a Survey</a></li>
             </ul>
     </div><!-- /.navbar-collapse -->
@@ -41,6 +47,12 @@
 	<%= yield :sidebar %>
 </div>
 <div class="col-md-9">
+	<% if notice then %> 
+ 		<p class="alert alert-info"><%= notice %></p>
+	<% end %>
+	<% if alert then %> 
+       		<p class="alert alert-danger"><%= alert %></p>
+	<% end %>
 	<%= yield %>
 </div>
 
