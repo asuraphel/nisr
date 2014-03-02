@@ -1,4 +1,5 @@
 Nisr::Application.routes.draw do
+  get "dashboard/index"
   resources :organizations
 
   # The priority is based upon order of creation: first created -> highest priority.

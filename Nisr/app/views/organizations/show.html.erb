@@ -1,14 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h1>
   <%= @organization.name %>
-</p>
+</h1>
 
-<p>
-  <strong>About:</strong>
+<pre>
   <%= @organization.about %>
-</p>
+</pre>
 
-<%= link_to 'Edit', edit_organization_path(@organization) %> |
-<%= link_to 'Back', organizations_path %>
+<%= link_to 'Edit Details', edit_organization_path(@organization) %> 

@@ -19,7 +19,7 @@
         <span class="icon-bar"></span>
       </button>
 	
-      <a class="navbar-brand" href="#"> <%= image_tag "eye.png" %> &nbsp; Nisr</a>
+      <a class="navbar-brand" href="#"> <%= image_tag "eye.png" %>Nisr</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
