@@ -6,7 +6,7 @@
 <div> 
     <ul> 
     <% current_user.organization.surveys.each do |survey| %>
-        <li> <%= survey.name %> </li>  
+        <li><%= link_to  survey.name, survey %> </li>  
     <% end %> 
     </ul> 
 </div> 

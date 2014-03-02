@@ -16,7 +16,14 @@
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
-  </div>
+</div>
+<div class="field"> 
+    <select name="stype_id"> 
+        <option value="1">SMS</option> 
+        <option value="2">Form</option>
+    </select>
+</div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
