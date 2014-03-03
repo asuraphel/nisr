@@ -5,6 +5,9 @@ Nisr::Application.routes.draw do
 
   resources :surveys
 
+  get 'surveys/configure/:id' => 'surveys#configure'
+  get 'surveys/visual/:id' => 'surveys#visual'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

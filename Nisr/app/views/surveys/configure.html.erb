@@ -1,0 +1,13 @@
+<% content_for :sidebar do %> 
+        <%= render "sidebar" %>
+<% end %> 
+
+<p>Design your SMS parser query as "[field]:[type],[field]:[type], ...". Where "field" is the the name of a field and "type" is one of NUMBER or STRING.</p>
+
+
+<% if 1 == @survey.stype_id  then #the SMS part is:<a >Change</a></p> %> 
+    <%= form_tag "/surveys/change_parser", remote: true do %> 
+        <%= text_field_tag :stype_id, @survey.parser %>
+        <%= submit_tag "Change"  %>
+    <% end %> 
+<% end %> 

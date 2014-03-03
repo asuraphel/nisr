@@ -1,4 +1,19 @@
+<% content_for :sidebar do %> 
+    <%= render "sidebar" %>
+<% end %> 
 
 <h1>  <%= @survey.name %></h1>
+<h3><span class="label label-primary"><%= ( @survey.stype_id == 1) ? "SMS" : "Form" %></span></h3>
 
-<%= link_to 'Edit', edit_survey_path(@survey) %>
+<%  if ( @survey.stype_id == 1) then %> 
+    <table>
+        <thead> 
+            <th> </th> 
+            <th> </th> 
+        </thead>
+
+    </table> 
+
+
+<% end %>
+

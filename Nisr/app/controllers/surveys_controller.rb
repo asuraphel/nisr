@@ -1,5 +1,20 @@
 class SurveysController < ApplicationController
-  before_action :set_survey, only: [:show, :edit, :update, :destroy]
+  before_action :set_survey, only: [:show, :edit, :update, :destroy, :visual, :configure]
+
+  def change_parser 
+    Survey.find( params[:survey_id])
+    s.parser = params[:parser]
+    s.save 
+  end 
+
+
+  def visual 
+    
+  end 
+
+  def configure 
+
+  end
 
   # GET /surveys
   # GET /surveys.json
